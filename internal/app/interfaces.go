@@ -2,6 +2,8 @@ package app
 
 import "context"
 
+//go:generate mockgen -source=interfaces.go -destination=./interfaces_mock.go -package=app
+
 type Runner interface {
 	Run(ctx context.Context, cfg RunConfig) error
 }
