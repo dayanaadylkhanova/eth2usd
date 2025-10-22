@@ -1,0 +1,13 @@
+services:
+  eth2usd:
+    build: .
+    image: eth2usd:local
+    command:
+      - "--format"
+      - "text"
+      - "--rpc-url"
+      - "${RPC_URL:-http://localhost:8545}"
+      - "--chainlink-registry"
+      - "${FEED_REGISTRY}"
+      - "--account"
+      - "${ACCOUNT}"
