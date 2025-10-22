@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+// FormatText TODO поправить игнор ошибки
 func FormatText(r ValuationResult) (string, error) {
 	var b strings.Builder
 	fmt.Fprintf(&b, "ASSET\tAMOUNT\tUSD\tSOURCE\tERROR\n")
